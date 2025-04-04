@@ -508,14 +508,10 @@
             <!-- Initial scene with a 360-degree image -->
             <a-sky id="sky" src="#welcome-bg" rotation="0 -90 0"></a-sky>
            
-            <!-- Camera with controls -->
+            <!-- Camera with controls - CURSOR REMOVED -->
             <a-entity id="rig" position="0 1.6 0">
                 <a-camera look-controls wasd-controls="acceleration: 100">
-                    <a-entity cursor="fuse: true; fuseTimeout: 500"
-                        position="0 0 -1"
-                        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                        material="color: white; shader: flat">
-                    </a-entity>
+                    <!-- Cursor entity removed from here -->
                 </a-camera>
             </a-entity>
            
@@ -726,7 +722,7 @@
            
             // Add speech synthesis welcome
             function speakWelcome() {
-                const welcomeMessage = "Welcome to the VR Gallery. Click on any image in the sidebar to view it in 360 degrees. Press VR button to enter virtual reality mode.";
+                const welcomeMessage = ".";
                
                 // Check if browser supports speech synthesis
                 if ('speechSynthesis' in window) {
@@ -854,6 +850,3 @@
     </script>
 </body>
 </html>
-
-
-
